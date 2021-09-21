@@ -4,6 +4,7 @@ import Backdrop from "../comps/ui/Backdrop";
 import Typography from "@mui/material/Typography";
 import styles from "./../styles/Home.module.css";
 import Image from "next/image";
+import TypewriterComponent from "typewriter-effect";
 
 export default function Home() {
   return (
@@ -31,8 +32,17 @@ export default function Home() {
               align={"center"}
               className={styles.greeting}
             >
-              Hi, I&apos;m Abir
+              Abir Taheer
             </Typography>
+
+            <TypewriterComponent
+              options={{
+                strings: ["A Jaguar", "A person"],
+                autoStart: true,
+                loop: true,
+                wrapperClassName: styles.typedText,
+              }}
+            />
           </div>
         </div>
       </Backdrop>

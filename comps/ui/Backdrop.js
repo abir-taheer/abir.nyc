@@ -8,23 +8,20 @@ export default function Backdrop({ children }) {
     "https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"
   );
   const vantaDots = useScript(
-    "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.dots.min.js"
+    "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.halo.min.js"
   );
 
   useEffect(() => {
     if (threeJS === "ready" && vantaDots === "ready" && ref.current) {
-      globalThis.VANTA.DOTS({
+      globalThis.VANTA.HALO({
         el: ref.current,
         mouseControls: false,
         touchControls: false,
         gyroControls: false,
-        minHeight: 400,
-        minWidth: 300,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0xffffff,
-        color2: 0xffffff,
-        backgroundColor: 0x6c5ce7,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        xOffset: 0,
+        yOffset: 0.04,
       });
     }
   }, [ref, vantaDots, threeJS]);
