@@ -17,33 +17,38 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Backdrop>
-        <div className={styles.flexCenter}>
-          <div className={styles.greetingContainer}>
-            <Image
-              src={"/icon.png"}
-              height={200}
-              width={200}
-              objectFit={"contain"}
-              alt={"Avatar of myself"}
-            />
-            <Typography
-              variant={"h2"}
-              align={"center"}
-              className={styles.greeting}
-            >
-              Abir Taheer
-            </Typography>
+      <Backdrop className={styles.backdrop}>
+        <div className={styles.greetingContainer}>
+          <Image
+            src={"/abir.jpg"}
+            height={200}
+            width={200}
+            className={styles.picture}
+            objectFit={"contain"}
+            alt={"Avatar of myself"}
+          />
+          <Typography
+            variant={"h2"}
+            align={"center"}
+            className={styles.greeting}
+          >
+            Abir Taheer
+          </Typography>
 
-            <TypewriterComponent
-              options={{
-                strings: ["A Jaguar", "A person"],
-                autoStart: true,
-                loop: true,
-                wrapperClassName: styles.typedText,
-              }}
-            />
-          </div>
+          <TypewriterComponent
+            options={{
+              strings: [
+                "Software Developer",
+                "Photographer",
+                "Older Brother",
+                "Cyclist",
+              ],
+              delay: 70,
+              autoStart: true,
+              loop: true,
+              wrapperClassName: styles.typedText,
+            }}
+          />
         </div>
       </Backdrop>
 

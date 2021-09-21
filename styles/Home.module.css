@@ -1,12 +1,16 @@
 .greeting {
   color: white;
+  text-shadow: 1px 1px 1px grey;
 }
 
-.flexCenter {
+.backdrop {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  width: 100vw;
+  height: 80vh;
+  margin: 0;
+  padding: 1rem;
 }
 
 .greetingContainer {
@@ -17,4 +21,9 @@
 .typedText {
   color: white;
   margin: 1rem;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.picture {
+  border-radius: 50%;
 }

@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import useScript from "../../hooks/useScript";
-import styles from "./Backdrop.module.css";
 
-export default function Backdrop({ children }) {
+export default function Backdrop({ children, className }) {
   const ref = useRef();
   const threeJS = useScript(
     "https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"
@@ -27,7 +26,7 @@ export default function Backdrop({ children }) {
   }, [ref, vantaDots, threeJS]);
 
   return (
-    <div ref={ref} className={styles.backdrop}>
+    <div ref={ref} className={className}>
       {children}
     </div>
   );
