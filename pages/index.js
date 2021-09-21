@@ -1,7 +1,9 @@
 import Head from "next/head";
-import Container from "@mui/material/Container";
 import Footer from "../comps/ui/Footer";
 import Backdrop from "../comps/ui/Backdrop";
+import Typography from "@mui/material/Typography";
+import styles from "./../styles/Home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,7 +16,26 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Backdrop />
+      <Backdrop>
+        <div className={styles.flexCenter}>
+          <div className={styles.greetingContainer}>
+            <Image
+              src={"/icon.png"}
+              height={200}
+              width={200}
+              objectFit={"contain"}
+              alt={"Avatar of myself"}
+            />
+            <Typography
+              variant={"h2"}
+              align={"center"}
+              className={styles.greeting}
+            >
+              Hi, I&apos;m Abir
+            </Typography>
+          </div>
+        </div>
+      </Backdrop>
 
       <Footer />
     </div>

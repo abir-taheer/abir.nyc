@@ -1,0 +1,15 @@
+.greeting {
+  color: white;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.greetingContainer {
+  text-align: center;
+  padding-top: 3rem;
+}

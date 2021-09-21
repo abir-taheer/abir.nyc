@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import useScript from "../../hooks/useScript";
 import styles from "./Backdrop.module.css";
 
-export default function Backdrop() {
+export default function Backdrop({ children }) {
   const ref = useRef();
   const threeJS = useScript(
     "https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"
@@ -18,8 +18,8 @@ export default function Backdrop() {
         mouseControls: false,
         touchControls: false,
         gyroControls: false,
-        minHeight: 600,
-        minWidth: 800,
+        minHeight: 400,
+        minWidth: 300,
         scale: 1.0,
         scaleMobile: 1.0,
         color: 0xffffff,
@@ -29,5 +29,9 @@ export default function Backdrop() {
     }
   }, [ref, vantaDots, threeJS]);
 
-  return <div ref={ref} className={styles.backdrop} />;
+  return (
+    <div ref={ref} className={styles.backdrop}>
+      {children}
+    </div>
+  );
 }
