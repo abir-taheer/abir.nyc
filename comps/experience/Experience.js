@@ -2,7 +2,7 @@ import { Box, Tabs, Tab, Slide } from "@mui/material";
 import { useState } from "react";
 
 export default function Experience() {
-  const [tab, setTab] = useState();
+  const [tab, setTab] = useState("stuysu");
 
   return (
     <Slide direction="up" in mountOnEnter unmountOnExit>
