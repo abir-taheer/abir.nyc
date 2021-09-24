@@ -9,7 +9,7 @@
   align-items: center;
   width: 100vw;
   height: 80vh;
-  margin: 0;
+  margin-bottom: 1rem;
   padding: 1rem;
 }
 
@@ -26,4 +26,9 @@
 
 .picture {
   border-radius: 50%;
+}
+
+.icon {
+  color: white;
+  margin: 1rem;
 }

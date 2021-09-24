@@ -7,7 +7,7 @@ export default function Footer() {
       <p>
         View Source on{" "}
         <Link
-          href={"https://github.com/abir-taheer"}
+          href={"https://github.com/abir-taheer/abir.nyc"}
           target={"_blank"}
           rel={"noopener noreferrer"}
         >
