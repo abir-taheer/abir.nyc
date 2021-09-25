@@ -1,13 +1,14 @@
 import styles from "./Icons.module.css";
 import { Icon, IconButton } from "@mui/material";
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
-import StackOverflow from "../../icons/StackOverflow";
+import StackOverflow from "../icons/StackOverflow";
+import Devpost from "../icons/Devpost";
 
 const icons = [
   {
-    icon: <Instagram />,
-    platform: "Instagram",
-    url: "https://instagram.com/abir.taheer",
+    icon: <Devpost />,
+    platform: "Devpost",
+    url: "https://devpost.com/abir-taheer",
   },
   {
     icon: <StackOverflow />,

@@ -1,10 +1,8 @@
 import { useState } from "react";
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+
 import ExperienceTabBar from "./ExperienceTabBar";
 import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import StuySU from "./tabs/StuySU";
 
 const contentMap = {
