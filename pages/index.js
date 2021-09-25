@@ -26,7 +26,6 @@ export default function Home() {
             src={"/icon.png"}
             height={200}
             width={200}
-            className={styles.picture}
             objectFit={"contain"}
             alt={"Avatar of myself"}
           />
