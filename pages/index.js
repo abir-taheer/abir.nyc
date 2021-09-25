@@ -42,11 +42,7 @@ export default function Home() {
         </div>
       </Backdrop>
 
-      <Container maxWidth={"md"}>
-        <Typography variant={"h3"} align={"center"} gutterBottom>
-          Projects
-        </Typography>
-
+      <Container maxWidth={"lg"}>
         <Experience />
       </Container>
 
