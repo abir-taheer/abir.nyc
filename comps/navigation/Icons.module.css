@@ -4,12 +4,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.icon {
-  margin: 1rem !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.icon:hover {
-  color: white !important;
-}

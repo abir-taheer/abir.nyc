@@ -32,7 +32,14 @@ export default function Icons() {
       {icons.map(({ url, platform, icon }) => (
         <IconButton
           key={platform}
-          className={styles.icon}
+          sx={{
+            color: "rgba(255, 255, 255, 0.6)",
+            margin: "1rem",
+
+            ":hover": {
+              color: "white",
+            },
+          }}
           href={url}
           target={"_blank"}
           rel={"noopener noreferrer"}
