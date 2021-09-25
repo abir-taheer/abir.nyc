@@ -1,11 +1,18 @@
 import { Box, Tabs, Tab, Slide } from "@mui/material";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Experience() {
   const [tab, setTab] = useState("stuysu");
+  const ref = useRef();
 
   return (
-    <Slide direction="up" in mountOnEnter unmountOnExit>
+    <Slide
+      direction="up"
+      in={!!ref.current}
+      ref={ref}
+      mountOnEnter
+      unmountOnExit
+    >
       <Box
         sx={{
           flexGrow: 1,
