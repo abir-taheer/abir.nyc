@@ -16,6 +16,7 @@ export default function Backdrop({ children, className }) {
       threeJS === "ready" &&
       vantaDots === "ready" &&
       ref.current &&
+      globalThis.VANTA?.HALO &&
       !initialized
     ) {
       setInitialized(true);

@@ -4,7 +4,6 @@ import Backdrop from "../comps/ui/Backdrop";
 import Typography from "@mui/material/Typography";
 import styles from "./../styles/Home.module.css";
 import Image from "next/image";
-import TypewriterComponent from "typewriter-effect";
 import Container from "@mui/material/Container";
 import Icons from "../comps/navigation/Icons";
 import Experience from "../comps/experience/Experience";
@@ -39,21 +38,6 @@ export default function Home() {
           >
             Abir Taheer
           </Typography>
-
-          <TypewriterComponent
-            options={{
-              strings: [
-                "Software Developer",
-                "Photographer",
-                "Older Brother",
-                "Cyclist",
-              ],
-              delay: 70,
-              autoStart: true,
-              loop: true,
-              wrapperClassName: styles.typedText,
-            }}
-          />
 
           <Icons />
         </div>
