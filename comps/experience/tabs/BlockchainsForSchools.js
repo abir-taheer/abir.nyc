@@ -12,6 +12,17 @@ const projects = [
     href: "https://hackbfs.com",
     github: "https://github.com/blockchainsforschools/ideation-challenge",
   },
+  {
+    title: "Main Site",
+    image: "/blockchainsforschools.org_.png",
+    alt: "Blockchains for Schools Home",
+    content:
+      "Led a team of developers and designers to decrease bounce rates and improve session times on the main site.",
+    tags: ["ExpressJS", "PostgreSQL"],
+    url: "blockchainsforschools.org",
+    href: "https://blockchainsforschools.org",
+    github: "https://github.com/blockchainsforschools/main-site",
+  },
 ];
 
 export default function BlockchainsForSchools({ container, tab }) {

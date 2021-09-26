@@ -6,7 +6,7 @@ const projects = [
     image: "/vote.stuysu.org_.png",
     alt: "Voting Site Home",
     content:
-      "Enabled Student Government elections to happen remotely while ensuring security, anonymity, and improving voter turnout by 107 percent in the first year.",
+      "Enabled Student Government elections to happen remotely while ensuring security, anonymity, and improving voter turnout by 107 percent in the first year. Also designed the new logo.",
     tags: ["Next.JS", "GraphQL", "MongoDB"],
     url: "vote.stuysu.org",
     href: "https://vote.stuysu.org",

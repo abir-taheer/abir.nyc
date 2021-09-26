@@ -12,6 +12,7 @@ import Link from "@mui/material/Link";
 import axios from "axios";
 import { Typewriter } from "react-simple-typewriter";
 import shuffleArray from "../utils/shuffleArray";
+import LightroomSlideshow from "../comps/photography/LightroomSlideshow";
 
 export async function getStaticProps() {
   const { data } = await axios.get(
@@ -30,6 +31,8 @@ export async function getStaticProps() {
 
 export default function Home({ reputation }) {
   const backdropRef = createRef();
+  const experienceRef = createRef();
+  const slideshowRef = createRef();
 
   const phrases = [
     "Software Developer",
@@ -106,8 +109,15 @@ export default function Home({ reputation }) {
         </div>
       </Backdrop>
 
-      <Container maxWidth={"lg"}>
+      <Container maxWidth={"lg"} ref={experienceRef}>
         <Experience backdropRef={backdropRef} />
+      </Container>
+
+      <Container maxWidth={"md"} ref={slideshowRef} sx={{ minHeight: "656px" }}>
+        <LightroomSlideshow
+          experienceRef={experienceRef}
+          slideshowRef={slideshowRef}
+        />
       </Container>
 
       <Footer />

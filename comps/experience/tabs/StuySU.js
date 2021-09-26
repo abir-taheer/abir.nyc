@@ -38,7 +38,7 @@ const projects = [
     tags: ["Next.JS", "GraphQL", "MongoDB", "Google Drive API"],
     href: "https://valentines.stuysu.org",
     url: "valentines.stuysu.org",
-    github: "valentines.stuysu.org",
+    github: "https://github.com/stuysu/valentines.stuysu.org",
   },
 ];
 

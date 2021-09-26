@@ -4,6 +4,7 @@ import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import StackOverflow from "../icons/StackOverflow";
 import Devpost from "../icons/Devpost";
+import { Instagram } from "@mui/icons-material";
 
 const icons = [
   {
@@ -25,6 +26,11 @@ const icons = [
     icon: <LinkedIn />,
     platform: "LinkedIn",
     url: "https://linkedin.com/in/AbirTaheer",
+  },
+  {
+    icon: <Instagram />,
+    platform: "Instagram",
+    url: "https://instagram.com/abir.taheer",
   },
 ];
 
