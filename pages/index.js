@@ -7,8 +7,11 @@ import Image from "next/image";
 import Container from "@mui/material/Container";
 import Icons from "../comps/navigation/Icons";
 import Experience from "../comps/experience/Experience";
+import { createRef } from "react";
 
 export default function Home() {
+  const backdropRef = createRef();
+
   return (
     <div>
       <Head>
@@ -20,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Backdrop className={styles.backdrop}>
+      <Backdrop className={styles.backdrop} ref={backdropRef}>
         <div className={styles.greetingContainer}>
           <Image
             src={"/icon.png"}
@@ -43,7 +46,7 @@ export default function Home() {
       </Backdrop>
 
       <Container maxWidth={"lg"}>
-        <Experience />
+        <Experience backdropRef={backdropRef} />
       </Container>
 
       <Footer />

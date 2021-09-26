@@ -1,12 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import Script from "next/script";
 
-export default function Backdrop({ children, className }) {
-  const ref = useRef();
+function BackdropWithRef({ children, className }, ref) {
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    if (ref.current && globalThis.VANTA?.BIRDS && !initialized) {
+    if (ref && ref.current && globalThis.VANTA?.BIRDS && !initialized) {
       setInitialized(true);
 
       globalThis.VANTA.BIRDS({
@@ -50,3 +49,7 @@ export default function Backdrop({ children, className }) {
     </>
   );
 }
+
+const Backdrop = forwardRef(BackdropWithRef);
+
+export default Backdrop;

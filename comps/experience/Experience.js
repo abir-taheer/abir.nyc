@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 
 import ExperienceTabBar from "./ExperienceTabBar";
 import Typography from "@mui/material/Typography";
@@ -9,7 +9,7 @@ import Slide from "@mui/material/Slide";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
 import StuyBOE from "./tabs/StuyBOE";
 
-export default function Experience() {
+function ExperienceWithRef({ backdropRef }, ref) {
   const [tab, setTab] = useState("stuysu");
   const containerRef = useRef();
   const observerRef = useRef();
@@ -17,31 +17,38 @@ export default function Experience() {
   const [observing, setObserving] = useState(false);
 
   useEffect(() => {
-    if (observerRef.current && !observing) {
+    if (backdropRef && backdropRef.current && !observing) {
       const options = {
-        threshold: 0.15,
+        threshold: 0.9,
       };
 
       const callback = (entries) => {
-        setDisplay(entries[0].isIntersecting);
+        setDisplay(!entries[0].isIntersecting);
       };
 
       const observer = new IntersectionObserver(callback, options);
-      observer.observe(observerRef.current);
+      observer.observe(backdropRef.current);
 
       setObserving(true);
     }
-  }, [observing, containerRef]);
+  }, [backdropRef, observing, containerRef]);
 
   return (
     <div
-      ref={observerRef}
-      style={{ minHeight: 600, transition: "height 0.5s ease-in" }}
+      style={{
+        minHeight: 600,
+        transition: "height 0.5s ease-in",
+      }}
+      ref={ref}
     >
       <Typography
         align={"center"}
         variant={"body1"}
-        sx={{ opacity: display ? 0 : 1, transition: "opacity 0.2s ease-in" }}
+        sx={{
+          opacity: display ? 0 : 1,
+          height: display ? 0 : undefined,
+          transition: "opacity, height 1s ease-in",
+        }}
       >
         <ArrowDownward
           sx={{
@@ -84,3 +91,7 @@ export default function Experience() {
     </div>
   );
 }
+
+const Experience = forwardRef(ExperienceWithRef);
+
+export default Experience;
