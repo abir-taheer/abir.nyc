@@ -10,7 +10,6 @@ import Experience from "../comps/experience/Experience";
 import { createRef } from "react";
 import Link from "@mui/material/Link";
 import axios from "axios";
-import dynamic from "next/dynamic";
 import { Typewriter } from "react-simple-typewriter";
 import shuffleArray from "../utils/shuffleArray";
 
@@ -39,7 +38,8 @@ export default function Home({ reputation }) {
       "Adventurer",
       "Cyclist",
       "Older brother :)",
-      `${reputation} Reputation on StackOverflow!`,
+      `${reputation} reputation on StackOverflow!`,
+      "Multiple-time hackathon winner",
     ]),
   ];
 

@@ -45,7 +45,7 @@ export default function ExperienceTabPanel({
 
         <Grid container padding={2} spacing={2}>
           {projects.map((project, index) => (
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={4} key={index}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={index}>
               <ExperienceCard {...project} />
             </Grid>
           ))}
