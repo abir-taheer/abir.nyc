@@ -46,8 +46,7 @@ function ExperienceWithRef({ backdropRef }, ref) {
         variant={"body1"}
         sx={{
           opacity: display ? 0 : 1,
-          height: display ? 0 : undefined,
-          transition: "opacity, height 1s ease-in",
+          transition: "opacity 1s ease-in",
         }}
       >
         <ArrowDownward
