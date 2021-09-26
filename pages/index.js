@@ -8,6 +8,7 @@ import Container from "@mui/material/Container";
 import Icons from "../comps/navigation/Icons";
 import Experience from "../comps/experience/Experience";
 import { createRef } from "react";
+import Link from "@mui/material/Link";
 
 export default function Home() {
   const backdropRef = createRef();
@@ -40,6 +41,15 @@ export default function Home() {
           >
             Abir Taheer
           </Typography>
+          <Link
+            variant={"subtitle1"}
+            align={"center"}
+            color={"#fff"}
+            href={"mailto:abir@taheer.me"}
+            target={"_blank"}
+          >
+            abir@taheer.me
+          </Link>
 
           <Icons />
         </div>
