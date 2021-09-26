@@ -1,18 +1,15 @@
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import Slide from "@mui/material/Slide";
 import GitHub from "@mui/icons-material/GitHub";
 import Language from "@mui/icons-material/Language";
+import IconButton from "@mui/material/IconButton";
+import Slide from "@mui/material/Slide";
 import { useEffect, useState } from "react";
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import ExperienceCard from "../ExperienceCard";
 
-export default function StuySU({ container, tab }) {
+export default function BlockchainsForSchools({ container, tab }) {
   const [display, setDisplay] = useState(false);
 
   useEffect(() => {
-    const should = tab === "stuysu";
+    const should = tab === "bfs";
 
     if (should) {
       const timeout = setTimeout(() => {
@@ -27,22 +24,22 @@ export default function StuySU({ container, tab }) {
 
   return (
     <Slide
+      in={display}
       mountOnEnter
       unmountOnExit
-      in={display}
       direction={display ? "up" : "left"}
       timeout={{ enter: 500, exit: 300, appear: 200 }}
       container={container}
     >
       <div>
         <Typography variant={"h4"} align={"center"} color={"primary"}>
-          Stuyvesant Student Union
+          Blockchains For Schools
         </Typography>
 
         <div style={{ textAlign: "center" }}>
           <IconButton
             sx={{ margin: 1 }}
-            href={"https://stuysu.org"}
+            href={"https://blockchainsforschools.org"}
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
@@ -51,19 +48,13 @@ export default function StuySU({ container, tab }) {
 
           <IconButton
             sx={{ margin: 1 }}
-            href={"https://github.com/stuysu"}
+            href={"https://github.com/blockchainsforschools"}
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
             <GitHub />
           </IconButton>
         </div>
-
-        <Grid container spacing={3} sx={{ margin: "0.5rem" }}>
-          <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
-            <ExperienceCard />
-          </Grid>
-        </Grid>
       </div>
     </Slide>
   );

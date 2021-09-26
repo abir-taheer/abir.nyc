@@ -16,7 +16,7 @@ export default function ExperienceTabBar({ value, setValue }) {
         value={value}
         onChange={(_, t) => setValue(t)}
         aria-label="Organizations"
-        sx={{ borderRight: 1, borderColor: "divider" }}
+        sx={{ borderRight: 1, borderColor: "divider", textAlign: "right" }}
       >
         <Tab label="Stuyvesant Student Union" value={"stuysu"} />
         <Tab label="BlockChains for Schools" value={"bfs"} />

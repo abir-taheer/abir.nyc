@@ -1,6 +1,7 @@
 import styles from "./Icons.module.css";
-import { Icon, IconButton } from "@mui/material";
-import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import IconButton from "@mui/material/IconButton";
+import GitHub from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
 import StackOverflow from "../icons/StackOverflow";
 import Devpost from "../icons/Devpost";
 

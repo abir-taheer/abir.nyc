@@ -6,18 +6,25 @@ export default function Backdrop({ children, className }) {
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    if (ref.current && globalThis.VANTA?.HALO && !initialized) {
+    if (ref.current && globalThis.VANTA?.BIRDS && !initialized) {
       setInitialized(true);
 
-      globalThis.VANTA.HALO({
+      globalThis.VANTA.BIRDS({
         el: ref.current,
-        mouseControls: false,
-        touchControls: false,
+        touchControls: true,
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
-        xOffset: 0.01,
-        yOffset: 0.1,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        birdSize: 3.0,
+        wingSpan: 29.0,
+        speedLimit: 6.0,
+        separation: 79.0,
+        alignment: 42.0,
+        cohesion: 23.0,
+        quantity: 3,
+        backgroundColor: 0x686de0,
       });
     }
   }, [initialized, ref]);
@@ -32,7 +39,7 @@ export default function Backdrop({ children, className }) {
       />
       <Script
         src={
-          "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.halo.min.js"
+          "https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.birds.min.js"
         }
         strategy={"beforeInteractive"}
       />
