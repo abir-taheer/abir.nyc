@@ -1,61 +1,28 @@
-import Typography from "@mui/material/Typography";
-import GitHub from "@mui/icons-material/GitHub";
-import Language from "@mui/icons-material/Language";
-import IconButton from "@mui/material/IconButton";
-import Slide from "@mui/material/Slide";
-import { useEffect, useState } from "react";
+import ExperienceTabPanel from "../ExperienceTabPanel";
+
+const projects = [
+  {
+    title: "HackBFS",
+    image: "/hackbfs.com_.png",
+    alt: "HackBFS Home",
+    content:
+      "Designed, created, and set up infrastructure to serve the hackathon website for thousands of visitors",
+    tags: ["ReactJS"],
+    url: "hackbfs.com",
+    href: "https://hackbfs.com",
+    github: "https://github.com/blockchainsforschools/ideation-challenge",
+  },
+];
 
 export default function BlockchainsForSchools({ container, tab }) {
-  const [display, setDisplay] = useState(false);
-
-  useEffect(() => {
-    const should = tab === "bfs";
-
-    if (should) {
-      const timeout = setTimeout(() => {
-        setDisplay(true);
-      }, 200);
-
-      return () => clearTimeout(timeout);
-    }
-
-    setDisplay(false);
-  }, [tab]);
+  const isActive = tab === "bfs";
 
   return (
-    <Slide
-      in={display}
-      mountOnEnter
-      unmountOnExit
-      direction={display ? "up" : "left"}
-      timeout={{ enter: 500, exit: 300, appear: 200 }}
+    <ExperienceTabPanel
       container={container}
-    >
-      <div>
-        <Typography variant={"h4"} align={"center"} color={"primary"}>
-          Blockchains For Schools
-        </Typography>
-
-        <div style={{ textAlign: "center" }}>
-          <IconButton
-            sx={{ margin: 1 }}
-            href={"https://blockchainsforschools.org"}
-            target={"_blank"}
-            rel={"noopener noreferrer"}
-          >
-            <Language />
-          </IconButton>
-
-          <IconButton
-            sx={{ margin: 1 }}
-            href={"https://github.com/blockchainsforschools"}
-            target={"_blank"}
-            rel={"noopener noreferrer"}
-          >
-            <GitHub />
-          </IconButton>
-        </div>
-      </div>
-    </Slide>
+      isActive={isActive}
+      name={"Blockchains for Schools"}
+      projects={projects}
+    />
   );
 }

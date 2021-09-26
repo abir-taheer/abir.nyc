@@ -7,6 +7,7 @@ import StuySU from "./tabs/StuySU";
 import BlockchainsForSchools from "./tabs/BlockchainsForSchools";
 import Slide from "@mui/material/Slide";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
+import StuyBOE from "./tabs/StuyBOE";
 
 export default function Experience() {
   const [tab, setTab] = useState("stuysu");
@@ -18,7 +19,7 @@ export default function Experience() {
   useEffect(() => {
     if (observerRef.current && !observing) {
       const options = {
-        threshold: 0.2,
+        threshold: 0.15,
       };
 
       const callback = (entries) => {
@@ -56,7 +57,8 @@ export default function Experience() {
         direction={display ? "up" : "left"}
         unmountOnExit={true}
         mountOnEnter={false}
-        timeout={400}
+        timeout={200}
+        container={observerRef.current}
       >
         <div>
           <Typography variant={"h3"} align={"center"} gutterBottom>
@@ -67,12 +69,14 @@ export default function Experience() {
             <Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
               <ExperienceTabBar value={tab} setValue={setTab} />
             </Grid>
+
             <Grid item xs={12} sm={8} md={9} lg={9} xl={9} ref={containerRef}>
               <StuySU container={containerRef.current} tab={tab} />
               <BlockchainsForSchools
                 container={containerRef.current}
                 tab={tab}
               />
+              <StuyBOE tab={tab} container={containerRef.current} />
             </Grid>
           </Grid>
         </div>
