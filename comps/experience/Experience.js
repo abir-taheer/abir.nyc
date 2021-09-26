@@ -55,8 +55,8 @@ export default function Experience() {
       <Slide
         in={display}
         direction={display ? "up" : "left"}
-        unmountOnExit={true}
-        mountOnEnter={false}
+        unmountOnExit
+        mountOnEnter
         timeout={200}
         container={observerRef.current}
       >
