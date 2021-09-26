@@ -19,8 +19,9 @@ export default function ExperienceTabBar({ value, setValue }) {
         sx={{ borderRight: 1, borderColor: "divider", textAlign: "right" }}
       >
         <Tab label="Stuyvesant Student Union" value={"stuysu"} />
-        <Tab label="BlockChains for Schools" value={"bfs"} />
         <Tab label="Stuyvesant Board of Elections" value={"stuyboe"} />
+        <Tab label="BlockChains for Schools" value={"bfs"} />
+        <Tab label="Stellar Cellar Doors" value={"stellar-doors"} />
       </Tabs>
     </Box>
   );

@@ -8,6 +8,7 @@ import BlockchainsForSchools from "./tabs/BlockchainsForSchools";
 import Slide from "@mui/material/Slide";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
 import StuyBOE from "./tabs/StuyBOE";
+import StellarCellarDoors from "./tabs/StellarCellarDoors";
 
 function ExperienceWithRef({ backdropRef }, ref) {
   const [tab, setTab] = useState("stuysu");
@@ -46,7 +47,7 @@ function ExperienceWithRef({ backdropRef }, ref) {
         variant={"body1"}
         sx={{
           opacity: display ? 0 : 1,
-          transition: "opacity 1s ease-in",
+          transition: "opacity 0.5s ease-in",
         }}
       >
         <ArrowDownward
@@ -67,22 +68,31 @@ function ExperienceWithRef({ backdropRef }, ref) {
         container={observerRef.current}
       >
         <div>
-          <Typography variant={"h3"} align={"center"} gutterBottom>
-            Projects
+          <Typography variant={"h3"} align={"center"}>
+            Experience
+          </Typography>
+          <Typography
+            variant={"subtitle1"}
+            color="text.secondary"
+            align={"center"}
+            gutterBottom
+          >
+            I&apos;m known to dabble here and there
           </Typography>
 
-          <Grid container>
+          <Grid container sx={{ margin: "1rem 0" }}>
             <Grid item xs={12} sm={4} md={3} lg={3} xl={3}>
               <ExperienceTabBar value={tab} setValue={setTab} />
             </Grid>
 
             <Grid item xs={12} sm={8} md={9} lg={9} xl={9} ref={containerRef}>
               <StuySU container={containerRef.current} tab={tab} />
+              <StuyBOE tab={tab} container={containerRef.current} />
               <BlockchainsForSchools
                 container={containerRef.current}
                 tab={tab}
               />
-              <StuyBOE tab={tab} container={containerRef.current} />
+              <StellarCellarDoors tab={tab} container={containerRef.current} />
             </Grid>
           </Grid>
         </div>

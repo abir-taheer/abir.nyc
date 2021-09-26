@@ -9,9 +9,39 @@ import Icons from "../comps/navigation/Icons";
 import Experience from "../comps/experience/Experience";
 import { createRef } from "react";
 import Link from "@mui/material/Link";
+import axios from "axios";
+import dynamic from "next/dynamic";
+import { Typewriter } from "react-simple-typewriter";
+import shuffleArray from "../utils/shuffleArray";
 
-export default function Home() {
+export async function getStaticProps() {
+  const { data } = await axios.get(
+    "https://api.stackexchange.com/2.3/users/10237430?order=desc&sort=reputation&site=stackoverflow"
+  );
+
+  const { reputation } = data.items[0];
+
+  return {
+    props: {
+      reputation,
+    },
+    revalidate: 60 * 15,
+  };
+}
+
+export default function Home({ reputation }) {
   const backdropRef = createRef();
+
+  const phrases = [
+    "Software Developer",
+    ...shuffleArray([
+      "Photographer",
+      "Adventurer",
+      "Cyclist",
+      "Older brother :)",
+      `${reputation} Reputation on StackOverflow!`,
+    ]),
+  ];
 
   return (
     <div>
@@ -41,15 +71,36 @@ export default function Home() {
           >
             Abir Taheer
           </Typography>
+
           <Link
             variant={"subtitle1"}
             align={"center"}
             color={"#fff"}
             href={"mailto:abir@taheer.me"}
             target={"_blank"}
+            paragraph
+            sx={{ marginBottom: 2 }}
           >
             abir@taheer.me
           </Link>
+
+          <Typography
+            align={"center"}
+            variant={"subtitle2"}
+            color={"white"}
+            paragraph
+            sx={{ marginTop: 1 }}
+          >
+            <Typewriter
+              words={phrases}
+              loop={5}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
+          </Typography>
 
           <Icons />
         </div>

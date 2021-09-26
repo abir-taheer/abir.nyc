@@ -7,10 +7,21 @@ const projects = [
     alt: "StuyActivities Home",
     content:
       "Led the creation of one of the most powerful and scalable organization management systems at one of the largest high schools in the United States",
-    tags: ["NodeJS", "ReactJS", "GraphQL"],
+    tags: ["NodeJS", "ReactJS", "GraphQL", "Google One Tap"],
     url: "stuyactivities.org",
     href: "https://stuyactivities.org",
     github: "https://github.com/stuysu/stuyactivities.org",
+  },
+  {
+    title: "Valentines Day Letters",
+    image: "/valentines.stuysu.org_.png",
+    alt: "Valentines Letters Site Home",
+    content:
+      "A site to let students send each other valentines day cards virtually with the option of anonymity, all implemented alongside a toxicity filter",
+    tags: ["Next.JS", "GraphQL", "MongoDB", "Google Drive API"],
+    href: "https://valentines.stuysu.org",
+    url: "valentines.stuysu.org",
+    github: "valentines.stuysu.org",
   },
 ];
 
