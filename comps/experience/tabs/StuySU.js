@@ -13,6 +13,23 @@ const projects = [
     github: "https://github.com/stuysu/stuyactivities.org",
   },
   {
+    title: "Student Union Applications",
+    image: "/applications.stuysu.org_.png",
+    alt: "Applications Site Home",
+    content:
+      "Developed the methodology and site for using modern cryptography and Google Drive APIs to allow students to anonymously apply for Student Union positions.",
+    tags: [
+      "WebCrypto API",
+      "Next.JS",
+      "GraphQL",
+      "Google Drive API",
+      "MongoDB",
+    ],
+    url: "applications.stuysu.org",
+    href: "https://applications.stuysu.org",
+    github: "https://github.com/stuysu/applications.stuysu.org",
+  },
+  {
     title: "Valentines Day Letters",
     image: "/valentines.stuysu.org_.png",
     alt: "Valentines Letters Site Home",
