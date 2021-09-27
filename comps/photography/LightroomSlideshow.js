@@ -10,7 +10,7 @@ export default function LightroomSlideshow({ experienceRef, slideshowRef }) {
   useEffect(() => {
     if (experienceRef && experienceRef.current && !observing) {
       const options = {
-        threshold: 0.3,
+        threshold: 0.5,
       };
 
       const callback = (entries) => {

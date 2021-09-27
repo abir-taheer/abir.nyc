@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 
 import GitHub from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
-import { Star } from "@mui/icons-material";
+import Star from "@mui/icons-material/Star";
 import Link from "@mui/material/Link";
 
 export default function ExperienceCard({
