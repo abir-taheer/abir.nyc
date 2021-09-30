@@ -94,7 +94,16 @@ function ExperienceWithRef({ backdropRef, experienceRef }, ref) {
               <ExperienceTabBar value={tab} setValue={setTab} />
             </Grid>
 
-            <Grid item xs={12} sm={8} md={9} lg={9} xl={9} ref={containerRef}>
+            <Grid
+              item
+              xs={12}
+              sm={8}
+              md={9}
+              lg={9}
+              xl={9}
+              ref={containerRef}
+              sx={{ overflowY: "clip" }}
+            >
               <StuySU container={containerRef.current} tab={tab} />
               <StuyBOE tab={tab} container={containerRef.current} />
               <BlockchainsForSchools
