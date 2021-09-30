@@ -13,7 +13,7 @@ import axios from "axios";
 import { Typewriter } from "react-simple-typewriter";
 import shuffleArray from "../utils/shuffleArray";
 import LightroomSlideshow from "../comps/photography/LightroomSlideshow";
-import {useMediaQuery} from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 export async function getStaticProps() {
   const { data } = await axios.get(

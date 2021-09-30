@@ -48,7 +48,7 @@ export default function Icons() {
             },
             "@media (max-width: 500px)": {
               margin: "0.5rem",
-            }
+            },
           }}
           href={url}
           target={"_blank"}

@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Slide from "@mui/material/Slide";
 
-export default function LightroomSlideshow({  slideshowRef }) {
+export default function LightroomSlideshow({ slideshowRef }) {
   const [display, setDisplay] = useState(false);
   const [observing, setObserving] = useState(false);
 
