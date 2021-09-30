@@ -109,11 +109,15 @@ export default function Home({ reputation }) {
         </div>
       </Backdrop>
 
-      <Container maxWidth={"lg"} ref={experienceRef}>
-        <Experience backdropRef={backdropRef} />
+      <Container maxWidth={"lg"} ref={experienceRef} sx={{ overflowX: "clip" }}>
+        <Experience backdropRef={backdropRef} experienceRef={experienceRef} />
       </Container>
 
-      <Container maxWidth={"md"} ref={slideshowRef} sx={{ minHeight: "656px" }}>
+      <Container
+        maxWidth={"md"}
+        ref={slideshowRef}
+        sx={{ minHeight: "656px", overflowX: "clip" }}
+      >
         <LightroomSlideshow
           experienceRef={experienceRef}
           slideshowRef={slideshowRef}

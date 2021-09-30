@@ -10,10 +10,9 @@ import ArrowDownward from "@mui/icons-material/ArrowDownward";
 import StuyBOE from "./tabs/StuyBOE";
 import StellarCellarDoors from "./tabs/StellarCellarDoors";
 
-function ExperienceWithRef({ backdropRef }, ref) {
+function ExperienceWithRef({ backdropRef, experienceRef }, ref) {
   const [tab, setTab] = useState("stuysu");
   const containerRef = useRef();
-  const observerRef = useRef();
   const [display, setDisplay] = useState(false);
   const [observing, setObserving] = useState(false);
 
@@ -65,7 +64,7 @@ function ExperienceWithRef({ backdropRef }, ref) {
         unmountOnExit
         mountOnEnter
         timeout={200}
-        container={observerRef.current}
+        container={experienceRef.current}
       >
         <div>
           <Typography variant={"h3"} align={"center"}>
