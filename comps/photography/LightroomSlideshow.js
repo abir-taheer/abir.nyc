@@ -1,29 +1,28 @@
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Slide from "@mui/material/Slide";
 
-export default function LightroomSlideshow({ experienceRef, slideshowRef }) {
+export default function LightroomSlideshow({  slideshowRef }) {
   const [display, setDisplay] = useState(false);
   const [observing, setObserving] = useState(false);
 
   useEffect(() => {
-    if (experienceRef && experienceRef.current && !observing) {
+    if (slideshowRef && slideshowRef.current && !observing) {
       const options = {
-        threshold: 0.5,
+        threshold: 0.2,
       };
 
       const callback = (entries) => {
         const entry = entries[0];
-        setDisplay(entry.boundingClientRect.y < 0 && !entry.isIntersecting);
+        setDisplay(entry.isIntersecting);
       };
 
       const observer = new IntersectionObserver(callback, options);
-      observer.observe(experienceRef.current);
+      observer.observe(slideshowRef.current);
 
       setObserving(true);
     }
-  }, [experienceRef, observing]);
+  }, [slideshowRef, observing]);
 
   return (
     <Slide

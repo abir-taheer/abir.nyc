@@ -116,10 +116,9 @@ export default function Home({ reputation }) {
       <Container
         maxWidth={"md"}
         ref={slideshowRef}
-        sx={{ minHeight: "656px", overflowX: "clip" }}
+        sx={{ minHeight: "700px", overflowX: "clip" }}
       >
         <LightroomSlideshow
-          experienceRef={experienceRef}
           slideshowRef={slideshowRef}
         />
       </Container>
