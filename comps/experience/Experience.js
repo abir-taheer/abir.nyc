@@ -9,6 +9,7 @@ import Slide from "@mui/material/Slide";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
 import StuyBOE from "./tabs/StuyBOE";
 import StellarCellarDoors from "./tabs/StellarCellarDoors";
+import styles from "./../../styles/Home.module.css";
 
 function ExperienceWithRef({ backdropRef, experienceRef }, ref) {
   const [tab, setTab] = useState("stuysu");
@@ -48,6 +49,7 @@ function ExperienceWithRef({ backdropRef, experienceRef }, ref) {
           opacity: display ? 0 : 1,
           transition: "opacity 0.5s ease-in",
         }}
+        className={styles.bouncingText}
       >
         <ArrowDownward
           sx={{

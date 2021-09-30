@@ -9,7 +9,7 @@ export default function LightroomSlideshow({  slideshowRef }) {
   useEffect(() => {
     if (slideshowRef && slideshowRef.current && !observing) {
       const options = {
-        threshold: 0.2,
+        threshold: 0.1,
       };
 
       const callback = (entries) => {

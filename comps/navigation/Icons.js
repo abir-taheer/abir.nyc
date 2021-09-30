@@ -43,10 +43,12 @@ export default function Icons() {
           sx={{
             color: "rgba(255, 255, 255, 0.6)",
             margin: "1rem",
-
             ":hover": {
               color: "white",
             },
+            "@media (max-width: 500px)": {
+              margin: "0.5rem",
+            }
           }}
           href={url}
           target={"_blank"}

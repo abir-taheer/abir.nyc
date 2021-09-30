@@ -13,6 +13,7 @@ import axios from "axios";
 import { Typewriter } from "react-simple-typewriter";
 import shuffleArray from "../utils/shuffleArray";
 import LightroomSlideshow from "../comps/photography/LightroomSlideshow";
+import {useMediaQuery} from "@mui/material";
 
 export async function getStaticProps() {
   const { data } = await axios.get(
@@ -33,6 +34,8 @@ export default function Home({ reputation }) {
   const backdropRef = createRef();
   const experienceRef = createRef();
   const slideshowRef = createRef();
+
+  const isMobile = useMediaQuery("(max-width: 500px)");
 
   const phrases = [
     "Software Developer",
@@ -61,8 +64,8 @@ export default function Home({ reputation }) {
         <div className={styles.greetingContainer}>
           <Image
             src={"/icon.png"}
-            height={200}
-            width={200}
+            height={isMobile ? 150 : 200}
+            width={isMobile ? 150 : 200}
             objectFit={"contain"}
             alt={"Avatar of myself"}
           />
@@ -82,7 +85,9 @@ export default function Home({ reputation }) {
             href={"mailto:abir@taheer.me"}
             target={"_blank"}
             paragraph
-            sx={{ marginBottom: 2 }}
+            sx={{
+              marginBottom: 2,
+            }}
           >
             abir@taheer.me
           </Link>
@@ -118,9 +123,7 @@ export default function Home({ reputation }) {
         ref={slideshowRef}
         sx={{ minHeight: "700px", overflowX: "clip" }}
       >
-        <LightroomSlideshow
-          slideshowRef={slideshowRef}
-        />
+        <LightroomSlideshow slideshowRef={slideshowRef} />
       </Container>
 
       <Footer />
