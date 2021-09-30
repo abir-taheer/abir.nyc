@@ -48,8 +48,16 @@ function ExperienceWithRef({ backdropRef, experienceRef }, ref) {
         sx={{
           opacity: display ? 0 : 1,
           transition: "opacity 0.5s ease-in",
+          cursor: "pointer",
         }}
         className={styles.bouncingText}
+        onClick={() =>
+          window.scrollTo({
+            left: 0,
+            top: window.innerHeight * 0.8,
+            behavior: "smooth",
+          })
+        }
       >
         <ArrowDownward
           sx={{
