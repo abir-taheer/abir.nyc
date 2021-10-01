@@ -42,8 +42,8 @@ export default function LightroomSlideshow({ slideshowRef }) {
           align={"center"}
           color={"text.secondary"}
         >
-          I&apos;ll make a real gallery later but for now here&apos;s a
-          lightroom slideshow embed
+          I&apos;m working on making a better gallery component but for the time
+          being here&spos;s a lightroom slideshow of my photos instead
         </Typography>
         <iframe
           id="iframe"
