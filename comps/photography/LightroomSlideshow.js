@@ -43,7 +43,7 @@ export default function LightroomSlideshow({ slideshowRef }) {
           color={"text.secondary"}
         >
           I&apos;m working on making a better gallery component but for the time
-          being here&spos;s a lightroom slideshow of my photos instead
+          being here&apos;s a lightroom slideshow of my photos instead
         </Typography>
         <iframe
           id="iframe"
