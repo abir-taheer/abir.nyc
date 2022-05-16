@@ -16,13 +16,17 @@ import LightroomSlideshow from "../comps/photography/LightroomSlideshow";
 import { useMediaQuery } from "@mui/material";
 
 export async function getStaticProps() {
-  // const { data } = await axios.get(
-  //   "https://api.stackexchange.com/2.3/users/10237430?order=desc&sort=reputation&site=stackoverflow"
-  // );
-  //
-  // const { reputation } = data.items[0];
+  let reputation = 1808;
+ 
+  try {
+    const { data } = await axios.get(
+      "https://api.stackexchange.com/2.3/users/10237430?order=desc&sort=reputation&site=stackoverflow"
+    );
 
-  const reputation = 1230;
+    reputation = data.items[0].reputation;
+  } catch(er) {
+    console.error(er);
+  }
 
   return {
     props: {
