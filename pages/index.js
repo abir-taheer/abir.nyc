@@ -119,19 +119,6 @@ export default function Home({ reputation }) {
           <Icons />
         </div>
       </Backdrop>
-
-      <Container maxWidth={"lg"} ref={experienceRef} sx={{ overflowX: "clip" }}>
-        <Experience backdropRef={backdropRef} experienceRef={experienceRef} />
-      </Container>
-
-      <Container
-        maxWidth={"md"}
-        ref={slideshowRef}
-        sx={{ minHeight: "700px", overflowX: "clip" }}
-      >
-        <LightroomSlideshow slideshowRef={slideshowRef} />
-      </Container>
-
       <Footer />
     </div>
   );
