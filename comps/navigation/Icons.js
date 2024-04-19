@@ -25,7 +25,7 @@ const icons = [
   {
     icon: <LinkedIn />,
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/AbirTaheer",
+    url: "https://linkedin.com/in/abir-t",
   },
   {
     icon: <Instagram />,
