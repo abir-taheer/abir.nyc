@@ -26,12 +26,7 @@ const icons = [
     icon: <LinkedIn />,
     platform: "LinkedIn",
     url: "https://linkedin.com/in/abir-t",
-  },
-  {
-    icon: <Instagram />,
-    platform: "Instagram",
-    url: "https://instagram.com/abir.taheer",
-  },
+  }
 ];
 
 export default function Icons() {
